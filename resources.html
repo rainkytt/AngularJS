@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js"></script>
+    <script src="resources.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container grid-5 center">
+            <div>
+                <a href="todo.html">
+                    <i class="fas fa-list-ul fa-2x"></i></a>
+                <h3>Todo</h3>
+            </div>
+            <div>
+                <a href="example.html">
+                    <i class="fas fa-briefcase fa-2x"></i></a>
+                <h3>Examples</h3>
+            </div>
+            <div>
+                <a href="index.htm">
+                    <i class="fas fa-home fa-2x"></i></a>
+                <h3>Home</h3>
+            </div>
+            <div>
+                <a href="game.html">
+                    <i class="fas fa-gamepad fa-2x"></i></a>
+                <h3>Game</h3>
+            </div>
+            <div>
+                <a href="feedback.html">
+                    <i class="far fa-comments fa-2x"></i></a>
+                <h3>Feedback</h3>
+            </div>
+        </div>
+    </section>
+
+    <div ng-app="myApp" ng-controller="namesCtrl">
+
+        <table>
+            <tr ng-repeat="x in names">
+                <td><a href="{{ x.resource }}" target="_blank">{{ x.resource }}</a></td>
+                <td>{{ x.info }}</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    <footer class="center bg-dark">
+        <a href="https://www.linkedin.com/company/angularteam/">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://twitter.com/angular">
+            <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <p>Tartu &copy; 2018</p>
+        <div>Fancy CSS - do not use IE</div>
+    </footer>
+</body>
+
+</html>
