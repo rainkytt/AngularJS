@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="js/feedback.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Feedback</title>
+</head>
+
+<body>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container grid-5 center">
+            <div>
+                <a href="todo.html">
+                    <i class="fas fa-list-ul fa-2x"></i></a>
+                <h3>Todo</h3>
+            </div>
+            <div>
+                <a href="example.html">
+                    <i class="fas fa-briefcase fa-2x"></i></a>
+                <h3>Examples</h3>
+            </div>
+            <div>
+                <a href="resources.html">
+                    <i class="fas fa-user-graduate fa-2x"></i></a>
+                <h3>Resources</h3>
+            </div>
+            <div>
+                <a href="game.html">
+                    <i class="fas fa-gamepad fa-2x"></i></a>
+                <h3>Game</h3>
+            </div>
+            <div>
+                <a href="index.htm">
+                    <i class="fas fa-home fa-2x"></i></a>
+                <h3>Home</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- feedback form -->
+    <div id="billPayPanel" class="panel" ng-controller="billCtrl">
+        <form name="demoForm" novalidate ng-submit="addCustomer(newCustomer)">
+            <div class="form-group">
+                <label class="fb">Your Name:</label>
+                <input name="customerName" placeholder="Sinu nimi" type="text" class="form-control" required ng-model="newCustomer.name">
+            </div>
+
+            <div class="form-group">
+                <label class="fb">Your Email:</label>
+                <input name="customerEmail" placeholder="Sinu email" type="email" class="form-control" required ng-model="newCustomer.email">
+            </div>
+
+            <div class="form-group">
+                <label class="fb">Your Message:</label>
+                <input name="terms" placeholder="Sinu sõnum" type="text" class="form-control" ng-model="newCustomer.terms">
+            </div>
+
+            <button type="submit" ng-disabled="demoForm.$invalid" class="fb">
+                SEND
+            </button>
+        </form>
+    </div>
+
+    <footer class="center bg-dark">
+        <a href="https://www.linkedin.com/company/angularteam/">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://twitter.com/angular">
+            <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <p>Tartu &copy; 2018</p>
+        <div>Fancy CSS - do not use IE</div>
+    </footer>
+
+</body>
+
+</html>
